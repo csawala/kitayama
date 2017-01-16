@@ -1,27 +1,52 @@
 .container {
   font-family: 'Exo', sans-serif;
 
-  nav .navbar {
+  nav .title-bar, .button-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
 
     width: 100%;
-    height: 8em;
-    border: 1px solid black;
-    background: grey;
 
-    font-size: 120%;
-    // color: white;
 
     .cmac-crest, .cmac-fist {
-      height: 6.5em;
+      height: 5em;
       margin: auto;
     }
-    .cmac-fist {
+
+    h1 {
+      font-size: 180%;
+      // color: white;
+    }
+  }
+
+  nav .title-bar {
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 7em;
+    background: grey;
+  }
+
+  nav .button-bar {
+    border: 1px solid black;
+    height: 1.5em;
+
+    .navbutton {
+      width: 5em;
+      text-align: center;
+      padding: auto;
+      background: black;
+      color: white;
+      border: 1px solid white;
+      // border-radius: 5px;
+    }
+    .navbutton:hover {
+      background: grey;
+      font-weight: bold;
+      font-size: 110%;
+
     }
   }
 }
