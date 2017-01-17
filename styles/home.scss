@@ -1,7 +1,7 @@
 .container {
   font-family: 'Exo', sans-serif;
 
-  nav .title-bar, .button-bar {
+  header.title-bar, nav .button-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -22,10 +22,10 @@
     }
   }
 
-  nav .title-bar {
+  header.title-bar {
     justify-content: space-between;
     border: 1px solid black;
-    height: 7em;
+    height: 6em;
     background: grey;
   }
 
@@ -34,7 +34,7 @@
     height: 1.5em;
 
     .navbutton {
-      width: 5em;
+      width: 6em;
       text-align: center;
       padding: auto;
       background: black;

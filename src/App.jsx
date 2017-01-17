@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
-import Nav from './Nav.jsx'
+import SiteContainer from './SiteContainer.jsx'
+import Header from './Header.jsx'
+
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-        <nav>
-          <Nav />
-        </nav>
+        <Header />
+        <SiteContainer />
       </div>
     )
   }

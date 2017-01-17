@@ -1,21 +1,18 @@
 import React, {Component} from 'react'
 
-class Nav extends Component {
+class SiteContainer extends Component {
   render() {
     return (
-      <div className="navbar">
-        <div className="title-bar">
-          <img src="../build/CMACcrest.png" className="cmac-crest" />
-          <h1>CMAC Kita Yama Dojo</h1>
-          <img src="../build/CMACfist.png" className="cmac-fist"/>
-        </div>
-
+      <nav className="navbar">
         <div className="button-bar">
           <a href='#' className="navbutton" onClick={console.log('cmac')}>
             CMAC
           </a>
+          <a href='#' className="navbutton" onClick={console.log('programs')}>
+            Programs
+          </a>
           <a href='#' className="navbutton" onClick={console.log('instructor')}>
-            Instructor
+            About Us
           </a>
           <a href='#' className="navbutton" onClick={console.log('schedule')}>
             Schedule
@@ -24,12 +21,12 @@ class Nav extends Component {
             Events
           </a>
           <a href='#' className="navbutton" onClick={console.log('contact')}>
-            Contact us
+            Contact Us
           </a>
         </div>
-      </div>
+      </nav>
     )
   }
 }
 
-export default Nav
+export default SiteContainer
