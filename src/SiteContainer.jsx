@@ -1,10 +1,14 @@
 import React, {Component} from 'react'
+import { Router, Route, Link } from 'react-router'
+
 import Nav from './Nav.jsx'
+import Home from './Home.jsx'
 import About from './About.jsx'
 import Events from './Events.jsx'
 import Programs from './Programs.jsx'
 import Schedule from './Schedule.jsx'
 import Cmac from './Cmac.jsx'
+import Contact from './Contact.jsx'
 
 class SiteContainer extends Component {
   constructor(props){
@@ -24,7 +28,7 @@ class SiteContainer extends Component {
 
 
   render() {
-
+// switch needed for routing
 
     return (
       <section>
@@ -32,7 +36,7 @@ class SiteContainer extends Component {
           <Nav pages={this.state.pages} />
         </nav>
         <div className="page-render">
-          <About />
+
         </div>
       </section>
     )

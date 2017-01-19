@@ -9,3 +9,5 @@ class Cmac extends Component {
     )
   }
 }
+
+export default Cmac
