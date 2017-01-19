@@ -1,30 +1,40 @@
 import React, {Component} from 'react'
+import Nav from './Nav.jsx'
+import About from './About.jsx'
+import Events from './Events.jsx'
+import Programs from './Programs.jsx'
+import Schedule from './Schedule.jsx'
+import Cmac from './Cmac.jsx'
 
 class SiteContainer extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      currentPage: 'About',
+      pages: [
+        ['CMAC', 'cmac'],
+        ['Programs', 'programs'],
+        ['About', 'about'],
+        ['Schedule', 'schedule'],
+        ['Events', 'events'],
+        ['Contact', 'contact']
+      ]
+    }
+  }
+
+
   render() {
+
+
     return (
-      <nav className="navbar">
-        <div className="button-bar">
-          <a href='#' className="navbutton" onClick={console.log('cmac')}>
-            CMAC
-          </a>
-          <a href='#' className="navbutton" onClick={console.log('programs')}>
-            Programs
-          </a>
-          <a href='#' className="navbutton" onClick={console.log('instructor')}>
-            About Us
-          </a>
-          <a href='#' className="navbutton" onClick={console.log('schedule')}>
-            Schedule
-          </a>
-          <a href='#' className="navbutton" onClick={console.log('events')}>
-            Events
-          </a>
-          <a href='#' className="navbutton" onClick={console.log('contact')}>
-            Contact Us
-          </a>
+      <section>
+        <nav className="navbar">
+          <Nav pages={this.state.pages} />
+        </nav>
+        <div className="page-render">
+          <About />
         </div>
-      </nav>
+      </section>
     )
   }
 }
