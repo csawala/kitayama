@@ -1,10 +1,15 @@
 import React, {Component} from 'react'
 
 class About extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
   render() {
     return (
-      <div className="instructor">
-        <section id="sensei">
+      <section className="page-render">
+        <article id="sensei" className="instructor">
           <h2>Sensei James Kenney</h2>
           <h3>Godan (5th Degree)</h3>
           <h3>Head Instructor</h3>
@@ -26,15 +31,15 @@ class About extends Component {
           <p>
             Recently he has been entrusted to produce a Business System Development Manual for the expansion and growth of the Classical Martial Arts Canada Organization, utilizing his extensive private business experience.
           </p>
-        </section>
+        </article>
 
-        <section id="senpai">
-         <h2>Senpai</h2>
+        <article id="senpai" className="instructor">
+         <h2>Senpai Nantoka</h2>
          <h3>Yondan (4th Degree)</h3>
          <h3>Assistant Instructor?</h3>
          <p></p>
-        </section>
-      </div>
+        </article>
+      </section>
     )
   }
 }

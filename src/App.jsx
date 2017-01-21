@@ -7,7 +7,6 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      currentPage: 'About',
       pages: [
         ['CMAC', 'cmac'],
         ['Programs', 'programs'],
@@ -23,14 +22,8 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <section>
-          <nav className="navbar">
-            <Nav pages={this.state.pages} />
-          </nav>
-          <div className="page-render">
-            {this.props.children}
-          </div>
-        </section>
+        <Nav pages={this.state.pages} />
+        {this.props.children}
       </div>
     )
   }

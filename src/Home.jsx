@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 class Home extends Component {
   render() {
     return (
-      <div>
+      <section className="page-render">
         THIS IS WHERE SAMPLE TEXT WOULD GO FOR HOME PAGE
-      </div>
+      </section>
     )
   }
 }

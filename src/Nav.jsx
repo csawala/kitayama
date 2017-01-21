@@ -8,7 +8,7 @@ class Nav extends Component {
 
   render () {
     return (
-      <div className="button-bar">
+      <nav className="button-bar">
         <IndexLink to='/' className="navbutton" activeClassName="active">Home</IndexLink>
         {
           this.props.pages.map((page) => {
@@ -17,7 +17,7 @@ class Nav extends Component {
             </Link>
           })
         }
-      </div>
+      </nav>
     )
   }
 }
