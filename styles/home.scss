@@ -1,6 +1,7 @@
 .container {
   font-family: 'Exo', sans-serif;
 
+  // Header & Nav Bar Styling
   header.title-bar, nav .button-bar {
     display: flex;
     flex-direction: row;
@@ -10,16 +11,15 @@
 
     width: 100%;
 
-
+    h1 {
+      font-size: 180%;
+      // color: white;
+    }
     .cmac-crest, .cmac-fist {
       height: 5em;
       margin: auto;
     }
 
-    h1 {
-      font-size: 180%;
-      // color: white;
-    }
   }
 
   header.title-bar {
@@ -31,10 +31,12 @@
 
   nav .button-bar {
     border: 1px solid black;
-    height: 1.5em;
+    height: 1.8em;
 
     .navbutton {
+      text-decoration: none;
       width: 6em;
+      height: 90%;
       text-align: center;
       padding: auto;
       background: black;
@@ -42,11 +44,23 @@
       border: 1px solid white;
       // border-radius: 5px;
     }
+    .navbutton.active {
+      background: blue;
+    }
+   .navbutton.active:hover {
+      background: red;
+    }
     .navbutton:hover {
       background: grey;
       font-weight: bold;
-      font-size: 110%;
+      font-size: 105%;
+    }
+  }
 
+  // About Page Styling
+  .instructor {
+    h2, h3 {
+      font-weight: bold;
     }
   }
 }
