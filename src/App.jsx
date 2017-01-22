@@ -14,14 +14,24 @@ class App extends Component {
         ['Schedule', 'schedule'],
         ['Events', 'events'],
         ['Contact', 'contact']
-      ]
+      ],
+      address: {
+        street: '2130 Mountain Grove Ave',
+        city: 'Burlington',
+        prov: 'ON',
+        postal: 'L7P 2J3'
+      },
+      contact: {
+        phone: '(905) 331-5344',
+        email: 'cmac.burl.north@sympatico.ca'
+      }
     }
   }
 
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header contact={this.state.contact} />
         <Nav pages={this.state.pages} />
         {this.props.children}
       </div>
