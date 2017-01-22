@@ -48,6 +48,13 @@ class Contact extends Component {
   }
 
 
+  handleFieldChange = (field) => {
+    return (ev) => {
+      this.setState({userContact: {[field]: ev.target.value}})
+    }
+  }
+
+
   render() {
     let dojo = this.state.address
 
@@ -67,20 +74,20 @@ class Contact extends Component {
           <form action="" onSubmit={this.handleFormSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name:
-                <input type="text" name="name" value={this.state.userContact.name} onChange={this.handleNameChange} />
+                <input type="text" name="name" value={this.state.userContact.name} onChange={this.handleFieldChange('name')} />
               </label>
             </div>
             <div className="form-group">
               <label htmlFor="email">E-mail:
-                <input type="email" name="email" value={this.state.userContact.email} onChange={this.handleEmailChange} />
+                <input type="email" name="email" value={this.state.userContact.email} onChange={this.handleFieldChange('email')} />
               </label>
               <label htmlFor="phone">Phone:
-                <input type="tel" name="phone" value={this.state.userContact.phone} onChange={this.handlePhoneChange} />
+                <input type="tel" name="phone" value={this.state.userContact.phone} onChange={this.handleFieldChange('phone')} />
               </label>
             </div>
             <div className="form-group">
               <label htmlFor="msg">Message:
-                <textarea name="msg" value={this.state.userContact.msg} onChange={this.handleMsgChange} placeholder="What would you like ask us?" />
+                <textarea name="msg" value={this.state.userContact.msg} onChange={this.handleFieldChange('msg')} placeholder="What would you like ask us?" />
               </label>
             </div>
             <input type="submit" value="Submit" />
