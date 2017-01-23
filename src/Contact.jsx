@@ -1,6 +1,8 @@
 'use strict'
 
 import React, {Component} from 'react'
+// immutability-helper will allow the state to be updated w/out being overwritten (as ...setState() would be doing)
+import update from 'immutability-helper'
 
 class Contact extends Component {
   constructor(props){
@@ -31,26 +33,23 @@ class Contact extends Component {
     // will need to: clear form, advise user of successful entry, send email
     ev.preventDefault()
     console.log("SUBMISSION RECEIVED:   ", this.state.userContact)
+    this.setState({userContact: {
+      name: '',
+      email: '',
+      phone: '',
+      msg: ''
+    }})
   }
 
-  // Handlers for contact form changes
-  handleNameChange = (ev) => {
-    this.setState({userContact: {name: ev.target.value}})
-  }
-  handleEmailChange = (ev) => {
-    this.setState({userContact: {email: ev.target.value}})
-  }
-  handlePhoneChange = (ev) => {
-    this.setState({userContact: {phone: ev.target.value}})
-  }
-  handleMsgChange = (ev) => {
-    this.setState({userContact: {msg: ev.target.value}})
-  }
-
-
+  // Handler for contact form changes
   handleFieldChange = (field) => {
     return (ev) => {
-      this.setState({userContact: {[field]: ev.target.value}})
+      // use $set to update field w/ target w/out overwriting entire object
+      let newState = update(this.state.userContact,
+        {[field]: { $set: ev.target.value
+      }})
+
+      this.setState({userContact: newState})
     }
   }
 
