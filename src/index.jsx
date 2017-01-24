@@ -14,7 +14,7 @@ import App from './App.jsx'
 import Home from './Home.jsx'
 import About from './About.jsx'
 import Events from './Events.jsx'
-import Programs from './Programs.jsx'
+import ProgramContainer from './ProgramContainer.jsx'
 import Schedule from './Schedule.jsx'
 import Cmac from './Cmac.jsx'
 import Contact from './Contact.jsx'
@@ -26,7 +26,7 @@ ReactDOM.render(
       <IndexRoute component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/events" component={Events}/>
-      <Route path="/programs" component={Programs}/>
+      <Route path="/programs" component={ProgramContainer}/>
       <Route path="/schedule" component={Schedule}/>
       <Route path="/cmac" component={Cmac}/>
       <Route path="/contact" component={Contact}/>

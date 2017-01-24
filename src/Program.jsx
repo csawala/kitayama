@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 
-class Programs extends Component {
+class Program extends Component {
   render() {
     return (
       <section className="page-render">
-        THIS IS WHERE SAMPLE TEXT WOULD GO FOR PROGRAMS
+        <div className="program karate"></div>
+        <div className="program taichi"></div>
+        <div className="program kobudo"></div>
 
         <Link to='/contact' className="contactLink">Contact Us</Link>
       </section>
