@@ -39,6 +39,8 @@ class Contact extends Component {
       phone: '',
       msg: ''
     }})
+
+    // Need to disable SUBMIT button?
   }
 
   // Handler for contact form changes

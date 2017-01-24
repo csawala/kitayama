@@ -74,6 +74,14 @@ body {
     margin: auto;
     width: 90%;
 
+    // Styling of Contact Action button on each page
+    a.contactLink {
+      border: 1px solid black;
+      padding: 0.5em;
+      background: grey;
+      color: white;
+      font-weight: bold;
+    }
 
     // About Page Styling
     .instructor {
@@ -93,6 +101,17 @@ body {
       }
 
       .profile-blurb {
+      }
+    }
+
+    // Contact Page Styling
+    .contact-form {
+      margin-top: 1em;
+      border: 1px solid black;
+      padding: 1em;
+
+      .form-group {
+        padding: 0.2em;
       }
     }
   }

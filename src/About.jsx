@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 class About extends Component {
   constructor(props) {
@@ -57,6 +58,8 @@ class About extends Component {
             <p></p>
           </div>
         </article>
+
+        <Link to='/contact' className="contactLink">Contact Us</Link>
       </section>
     )
   }
