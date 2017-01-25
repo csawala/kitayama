@@ -1,6 +1,7 @@
 'use strict'
 
 import React, {Component} from 'react'
+import Map from './Map.jsx'
 // immutability-helper will allow the state to be updated w/out being overwritten (as ...setState() would be doing)
 import update from 'immutability-helper'
 
@@ -41,6 +42,7 @@ class Contact extends Component {
     }})
 
     // Need to disable SUBMIT button?
+    // Add anti-spam feature
   }
 
   // Handler for contact form changes
@@ -70,6 +72,10 @@ class Contact extends Component {
         {this.state.phone}
         <br/>
         {this.state.email}
+
+        <div className="map">
+          <Map google={this.props.google} />
+        </div>
 
         <div className="contact-form">
           <form action="" onSubmit={this.handleFormSubmit}>

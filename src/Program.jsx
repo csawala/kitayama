@@ -7,6 +7,7 @@ class Program extends Component {
         <div className="program karate"></div>
         <div className="program taichi"></div>
         <div className="program kobudo"></div>
+        <div className="program youth"></div>
 
         <Link to='/contact' className="contactLink">Contact Us</Link>
       </section>
@@ -14,4 +15,4 @@ class Program extends Component {
   }
 }
 
-export default Programs
+export default Program

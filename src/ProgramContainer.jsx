@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router'
+import Program from './Program.jsx'
 
 
 class ProgramContainer extends Component {
@@ -11,6 +12,8 @@ class ProgramContainer extends Component {
           <p>
             As part of the Karate program, students also learn Japanese Jiu Jitsu, Aikido, and self defence training. Goju Ryu reflects the concept of Yin and Yang -- that these two opposites should complement each other. It is this complement of hard and soft which gives Goju Ryu its beautiful, disciplined movements, filled with grace, flowing forms, and strength.
           </p>
+          MORE DETAILS (render in program-details below)
+          SCHEDULE link?
         </div>
         <div className="program" id="taichi">
           <h3>Tai Chi</h3>
@@ -30,6 +33,10 @@ class ProgramContainer extends Component {
             Martial Arts have long been recognized as one of the best methods to help young people develop their confidence and learn how to improve their attention span. Improved attention span has been shown to be one of the most obvious tools for improving academic performance. Training in Martial Arts focuses directly on this aspect of development.
           </p>
         </div>
+
+        <article id="program-details">
+          WILL NEED TO RENDER COMPONENTS HERE
+        </article>
 
         <Link to='/contact' className="contactLink">Contact Us</Link>
       </section>
