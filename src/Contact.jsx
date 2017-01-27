@@ -1,7 +1,7 @@
 'use strict'
 
 import React, {Component} from 'react'
-import Map from './Map.jsx'
+import MapContainer from './MapContainer.jsx'
 // immutability-helper will allow the state to be updated w/out being overwritten (as ...setState() would be doing)
 import update from 'immutability-helper'
 
@@ -45,7 +45,6 @@ class Contact extends Component {
     // Add anti-spam feature
   }
 
-  // Handler for contact form changes
   handleFieldChange = (field) => {
     return (ev) => {
       // use $set to update field w/ target w/out overwriting entire object
@@ -56,7 +55,6 @@ class Contact extends Component {
       this.setState({userContact: newState})
     }
   }
-
 
   render() {
     let dojo = this.state.address
@@ -73,9 +71,7 @@ class Contact extends Component {
         <br/>
         {this.state.email}
 
-        <div className="map">
-          <Map google={this.props.google} />
-        </div>
+        <MapContainer />
 
         <div className="contact-form">
           <form action="" onSubmit={this.handleFormSubmit}>
