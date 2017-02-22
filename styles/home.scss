@@ -39,16 +39,20 @@ body {
   }
 
   nav.button-bar {
+    justify-content: center;
     border: 1px solid black;
-    height: 1.8em;
+    height: 1.9em;
     margin-top: 6.1em;
+    background: black;
 
     .navbutton {
+      align-items: center;
+      flex-grow: 1;
       text-decoration: none;
-      width: 6em;
+      min-width: 5.5em;
       height: 90%;
       text-align: center;
-      padding: auto;
+      // padding: auto;
       background: black;
       color: white;
       border: 1px solid white;

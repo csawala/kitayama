@@ -1,7 +1,7 @@
 'use strict'
 
 import React, {Component} from 'react'
-import MapContainer from './MapContainer.jsx'
+// import MapContainer from './MapContainer.jsx'
 // immutability-helper will allow the state to be updated w/out being overwritten (as ...setState() would be doing)
 import update from 'immutability-helper'
 
@@ -71,7 +71,6 @@ class Contact extends Component {
         <br/>
         {this.state.email}
 
-        <MapContainer />
 
         <div className="contact-form">
           <form action="" onSubmit={this.handleFormSubmit}>
